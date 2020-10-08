@@ -4,30 +4,31 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 
-
+//Create a FromPanel class from JPanel Library
 public class FormPanel extends JPanel{
 	
-	private JLabel nameLabel;
-	private JLabel occupationLabel;
-	private	JTextField nameField;
-	private JTextField occupationField;
-	private JButton submitBtn;
+	private JLabel nameLabel; // Create Label Instance for the name
+	private JLabel occupationLabel; // Create label Instance for Occupation
+	private	JTextField nameField;	// Create Instance Object
+	private JTextField occupationField; 
+	private JButton submitBtn; //Create Instance Object
 	
 	public FormPanel() {
+	// Set size for Form Panel
 		Dimension dim = getPreferredSize();
 		dim.width = 250;
 		setPreferredSize(dim);
 		
-		nameLabel = new JLabel("Full name:");
-		occupationLabel = new JLabel("Occupation:");
-		nameField = new JTextField(10);
-		occupationField = new JTextField(10);
+		nameLabel = new JLabel("Full name:"); // create nameLabel Object
+		occupationLabel = new JLabel("Occupation:"); //create Occupation Object
+		nameField = new JTextField(10); // create nameField object with length of 10 
+		occupationField = new JTextField(10); 
 		
 		submitBtn = new JButton("Submit");
 		
 		
-		Border innerBorder = BorderFactory.createTitledBorder("Info");
-		Border outerBorder = BorderFactory.createEmptyBorder(5, 5, 5, 5);
+		Border innerBorder = BorderFactory.createTitledBorder("Info"); // Create Boder for the Form panel
+		Border outerBorder = BorderFactory.createEmptyBorder(5, 5, 5, 5); // Set layout for the border
 		setBorder(BorderFactory.createCompoundBorder(outerBorder, innerBorder));
 		
 		
@@ -36,7 +37,7 @@ public class FormPanel extends JPanel{
 		GridBagConstraints gc = new GridBagConstraints();
 		
 		
-
+// Set Layout for part
 		////////////////First Row////////////
 		
 		gc.weightx = 1;

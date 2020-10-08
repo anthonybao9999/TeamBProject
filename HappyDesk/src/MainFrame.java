@@ -6,25 +6,25 @@ import javax.swing.*;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
-
+// Main Panel OF the project
 public class MainFrame extends JFrame {
 	
 	private TextPanel textPanel;
 	private JButton btn;
 	private ToolBar toolbar;
 	private FormPanel formPanel;
+	private FormPanel formPanel2;
 	
-	public MainFrame() {
+	public MainFrame() { // Create The main windows for the app
 		super("Happy Desk");
 		
 		setLayout(new BorderLayout());
 		
-		toolbar = new ToolBar();
-		textPanel = new TextPanel();
-		formPanel = new FormPanel();
-	
+		toolbar = new ToolBar(); //Create a toolbar object
+		textPanel = new TextPanel(); // Create a textPanel Object
+		formPanel = new FormPanel(); // Create a formPanel Object
 		
-		
+		// Create Event Listener
 		
 		toolbar.setStringListener(new StringListener() {
 			public void textEmitted(String text) {
@@ -33,11 +33,12 @@ public class MainFrame extends JFrame {
 		});
 		
 		
-		add(formPanel, BorderLayout.WEST);
+		add(formPanel, BorderLayout.WEST); // add formPanel and set to the left
 		
-		add(textPanel, BorderLayout.CENTER);
+		add(textPanel, BorderLayout.CENTER); // add text Panel and set to the center
+		
 
-		add(toolbar, BorderLayout.NORTH);
+		add(toolbar, BorderLayout.NORTH); // add tool bar and set to the top
 		
 		setSize(600, 500);
 		

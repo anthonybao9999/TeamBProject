@@ -4,6 +4,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
+//Create a TextPanel Class
 public class TextPanel extends JPanel {
 	
 	private JTextArea textArea;

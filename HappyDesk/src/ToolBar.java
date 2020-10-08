@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+// Create Toolbar class, with include add and delete Button
 public class ToolBar extends JPanel implements ActionListener  {
 	
 	private JButton addButton;
@@ -32,7 +33,7 @@ public class ToolBar extends JPanel implements ActionListener  {
 	public void setStringListener(StringListener listener) {
 		this.textListener = listener;
 	}
-
+	// Event Handler for click button
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		JButton clicked = (JButton)e.getSource();
